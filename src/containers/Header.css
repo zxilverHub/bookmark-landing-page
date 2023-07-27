@@ -1,0 +1,133 @@
+#header {
+    position: relative;
+    top: 100px;
+
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding: 0 0 0 10%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+    height: 100%;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-size: 3.5rem;
+    font-weight: var(--weight-lg);
+    line-height: 1;
+}
+
+.sub-title {
+    color: var(--grayish-blue);
+    font-size: var(--text);
+    font-weight: var(--weight-sm);
+    line-height: 1.4;
+}
+
+.hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-cta button {
+    padding: .7rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: var(--weight-lg);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px var(--grayish-blue);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--normal);
+}
+
+.cta:first-child {
+    background-color: var(--soft-blue);
+    outline: 2px solid var(--soft-blue);
+}
+.cta:first-child:hover {
+    background-color: white;
+    color: var(--soft-blue);
+}
+
+.cta:last-child { color: var(--dark-blue); }
+.cta:last-child:hover { outline: 2px solid var(--dark-blue); }
+
+.hero-illustration {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    width: 70%;
+    height: 60%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: var(--soft-blue);
+}
+
+@media (max-width: 840px) {
+    #header {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-title,
+    .hero-illustration {
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-cta { justify-content: center; }
+}
+
+@media (max-width: 500px) {
+    #header {
+        padding: 0 10%;
+    }
+    .hero-illustration { position: static; }
+    .hero-title { gap: 1rem; }
+    .title { font-size: 2rem; }
+    .hero-cta button {
+        padding: .5rem 1rem;
+    }
+    .hero-bg 
+    {
+        top: 15%;
+        height: 30%;
+    }
+}
+
+@media (max-width: 290px) {
+    .hero-cta { flex-direction: column; }
+} 

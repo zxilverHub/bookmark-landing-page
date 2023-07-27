@@ -1,0 +1,119 @@
+#contact {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    min-width: 250px;
+    margin: 4rem auto;
+    padding: 4rem 1rem 5rem 1rem;
+    background-color: var(--soft-blue);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.eye-brow {
+    color: rgb(243, 238, 238);
+    font-size: var(--text);
+    font-weight: var(--weight-md);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: var(--weight-lg);
+    max-width: 20ch;
+    text-align: center;
+}
+
+.form {
+    width: 450px;
+    max-width: 450px;
+    min-width: 250px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.acontact-us {
+    padding: .9rem 1.5rem;
+    white-space: nowrap;
+    border: none;
+    outline: 2px solid var(--soft-red);
+    background-color: var(--soft-red);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.acontact-us:hover {
+    background-color: white;
+    color: var(--soft-red);
+}
+
+.input {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.email {
+    width: 100%;
+    height: 100%;
+    padding: .9rem 1.5rem;
+
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: var(--weight-md);
+}
+.email::placeholder {  
+    font-size: 1rem;
+}
+
+.error-msg {
+    position: absolute;
+    bottom: -1.5rem;
+    padding: .2rem 1rem;
+    font-size: .8rem;
+    background-color: var(--soft-red);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
+}
+
+.errState {
+    background: white url('../images//icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+@media (max-width: 500px) {
+    .form {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 290px) {
+    .form {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .form  * {
+        width: 100%;
+    }
+
+    .eye-brow {
+        text-align: center;
+    }
+}
